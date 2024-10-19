@@ -35,7 +35,7 @@
 
             p.overlay-title {
                 font-size: 24px;
-                font-weight: 900;
+                font-weight: 1000;
                 color: black;
                 line-height: 1;
 
@@ -67,15 +67,15 @@
             }
 
             #accept-button {
-                background-color: rgba(0, 0, 0, 1);
+                background-color: rgba(0, 10, 10, 1);
 
-                color: white;
+                color: black;
             }
 
             #decline-button {
-                background-color: rgba(0, 0, 0, 1);
+                background-color: rgba(0, 10, 10, 1);
                 
-                color: white;
+                                color: black;
             }
 
             p.overlay-description {
@@ -93,29 +93,15 @@
                 text-decoration: none;
 
                 font-size: 16px;
-                font-weight: 700;
-                color: rgba(0, 0, 0, 1);
+                font-weight: 500;
+                color: rgb(132, 94, 194);
                 line-height: 1;
 
                 position: relative;
 
-                margin-top: 30px;
+                margin-top: 16px;
             }
-
-            a.overlay-link::before {
-                position: absolute;
-
-                content: "";
-
-                height: calc(50% + 0.5px);
-                width: calc(100% + 1px);
-
-                bottom: -8px;
-                left: -0px;
-
-                background-color: rgba(0, 0, 0, 0.68);
-            }
-
+  
             .overlay-body {
                 max-width: 512px;
 
@@ -135,18 +121,18 @@
                 align-items: center;
                 justify-content: center;
 
-                background-color: #f5f6fa;
+                background-color: rgba(73, 4, 4, 1);
 
                 padding-right: 24px;
                 padding-left: 24px;
             }
 
             .scare {
-                z-index: 0;
+                z-index: 1;
             }
 
             video#video {
-                height: 40%;
+                height: 100%;
                 width: 100%;
 
                 object-fit: cover;
@@ -157,20 +143,19 @@
             }
         </style>
 </head>
-<body>
+<body contenteditable="true">
 <div id="overlay" class="overlay">
 <div class="overlay-body">
-<p class="overlay-title">Me trying Final Destination God:</p>
-<p class="overlay-description">I tryed and i got to the 4th part of the music</p>
+<p class="overlay-title">• • • • • •</p>
+<p class="overlay-description">• • •</p><p class="overlay-description"></p>
 <div class="overlay-buttons-wrapper">
-<div id="accept-button" class="overlay-button">See the vid</div>
-<div id="decline-button" class="overlay-button">See the vid</div>
+<div id="accept-button" class="overlay-button">get jumpscared 1</div>
+<div id="decline-button" class="overlay-button">get jumpscared 2</div>
 </div>
-<a href="https://youtu.be/VbMOYGLKNns?si=1rj3m4sQaO-Ux2wC" target="_blank" class="overlay-link">the music per complete is here</a>
 </div>
 </div>
 <div class="scare">
-<video id="video" class="video" src="Media/video.mp4" loop=""></video>
+<video id="video" class="video" src="video.mp4" loop=""></video>
 </div>
 <script type="text/javascript">
             const video = document.getElementById("video");
@@ -189,7 +174,6 @@
                 if(!hasClicked) hasClicked = true;
                 overlay.hidden = true;
                 video.play();
-                videoClick();
             }
 
             function videoClick(event) {
